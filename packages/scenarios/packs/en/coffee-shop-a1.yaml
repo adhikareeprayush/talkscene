@@ -1,0 +1,37 @@
+id: en-coffee-shop-a1
+version: 2
+language: en
+level: A1
+category: food
+icon: "☕"
+title: { en: "Ordering Coffee" }
+summary: "Order a drink in an English-speaking café, choose a size, and pay — with the three questions baristas always ask."
+persona:
+  name: "Maya"
+  role: "Barista"
+  style: "Fast, friendly North American service English. Uses 'What can I get you?' and 'For here or to go?'"
+setting: "A busy coffee shop on a weekday morning, queue behind you."
+user_role: "You want a medium latte to take away, and you are not sure whether they take cards."
+goals:
+  - { id: order_drink, text: "Order a drink" }
+  - { id: choose_size, text: "Say what size you want" }
+  - { id: here_or_togo, text: "Say whether it's for here or to go" }
+  - { id: pay, text: "Ask about or make the payment" }
+target_vocab: ["medium", "to go", "oat milk", "card", "name for the order"]
+target_grammar: ["Can I have / I'd like", "a / an with drinks", "Do you take …?"]
+opening_line: "Hi there! What can I get you?"
+turn_limits: { min: 6, default: 10, max: 12 }
+complications:
+  - "She asks for a name for the order."
+  - "They are out of oat milk and offer an alternative."
+useful_phrases:
+  - { text: "Can I have a medium latte, please?", reading: "kæn aɪ hæv ə ˈmiːdiəm ˈlɑːteɪ", meaning: "Standard polite order." }
+  - { text: "To go, please.", reading: "tə ˈɡoʊ pliːz", meaning: "Takeaway (US). In the UK: 'takeaway, please'." }
+  - { text: "Do you take card?", reading: "də jə ˈteɪk kɑːrd", meaning: "Asking about payment method." }
+cultural_notes:
+  - "'For here or to go?' (US) = 'Eat in or takeaway?' (UK). Both expect a two-word answer."
+  - "Tipping a dollar or rounding up is normal in the US, unusual in the UK and Australia."
+  - "Pronunciation focus: the vowel in 'medium' vs 'large', and linking in 'Can I have a…' → 'Cannaihava'."
+voice: { azure: "en-US-JennyNeural", browser_hint: "en-US/female" }
+tags: [food, cafe, beginner]
+status: published

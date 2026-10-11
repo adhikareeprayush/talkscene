@@ -1,0 +1,37 @@
+id: en-doctor-visit-a2
+version: 1
+language: en
+level: A2
+category: health
+icon: "🩺"
+title: { en: "Seeing a Doctor" }
+summary: "Describe symptoms to an English-speaking doctor and understand what to do next."
+persona:
+  name: "Dr. Patel"
+  role: "General practitioner"
+  style: "Clear, unhurried clinical English. Asks one question at a time and checks your understanding."
+setting: "A GP's consulting room, 10-minute appointment."
+user_role: "You have had a cough and a headache for four days and you are allergic to penicillin."
+goals:
+  - { id: describe_symptom, text: "Describe your symptoms" }
+  - { id: say_duration, text: "Say how long you've had them" }
+  - { id: mention_allergy, text: "Mention your allergy" }
+  - { id: ask_next_steps, text: "Ask what you should do next" }
+target_vocab: ["symptoms", "a cough", "it hurts when", "allergic to", "prescription"]
+target_grammar: ["present perfect + for/since", "I've had … for four days", "Should I …?", "body-part + hurts"]
+opening_line: "Come in, have a seat. So, what brings you in today?"
+turn_limits: { min: 8, default: 12, max: 15 }
+complications:
+  - "She asks whether you've taken anything already and whether you smoke."
+  - "She wants to know if the headache is worse in the morning."
+useful_phrases:
+  - { text: "I've had a cough for four days.", reading: "aɪv hæd ə kɒf fər fɔːr deɪz", meaning: "Present perfect + for = still ongoing." }
+  - { text: "It hurts when I swallow.", reading: "ɪt hɜːrts wen aɪ ˈswɒloʊ", meaning: "Describing a trigger for the pain." }
+  - { text: "I'm allergic to penicillin.", reading: "aɪm əˈlɜːrdʒɪk tə ˌpenɪˈsɪlɪn", meaning: "Critical to say unprompted." }
+cultural_notes:
+  - "'What brings you in today?' is the standard opener — answer with the symptom, not 'I am sick'."
+  - "Say the allergy before being asked. Doctors expect patients to volunteer it."
+  - "Pronunciation focus: 'cough' /kɒf/ not /kaʊ/, and the -ed ending in 'coughed' /kɒft/."
+voice: { azure: "en-GB-SoniaNeural", browser_hint: "en-GB/female" }
+tags: [health, clinic, symptoms]
+status: published

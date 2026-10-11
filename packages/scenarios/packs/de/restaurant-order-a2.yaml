@@ -1,0 +1,40 @@
+id: de-restaurant-order-a2
+version: 2
+language: de
+level: A2
+category: food
+icon: "🍽️"
+title: { en: "Ordering at a Restaurant", de: "Im Restaurant bestellen" }
+summary: "Get a table, order drinks and food in a Munich Gasthaus, and split the bill."
+persona:
+  name: "Herr Krüger"
+  role: "Waiter"
+  style: "Correct and efficient, always Sie. Uses Konjunktiv politeness (Was darf ich Ihnen bringen?)."
+setting: "A traditional Gasthaus in Munich, 7 PM, busy but not full."
+user_role: "You and a friend have no reservation. One of you is vegetarian. You want to pay separately."
+learner_register: polite
+goals:
+  - { id: ask_table, text: "Ask for a table for two" }
+  - { id: order_drink, text: "Order drinks" }
+  - { id: ask_vegetarian, text: "Ask about vegetarian dishes" }
+  - { id: order_food, text: "Order food" }
+  - { id: ask_bill_split, text: "Ask for the bill, paying separately" }
+target_vocab: ["Speisekarte", "vegetarisch", "Vorspeise", "zusammen oder getrennt", "die Rechnung"]
+target_grammar: ["Ich hätte gern …", "Könnten Sie …?", "Konjunktiv II for politeness", "Dative with bringen"]
+opening_line: "Guten Abend! Haben Sie reserviert?"
+turn_limits: { min: 8, default: 12, max: 15 }
+complications:
+  - "Only a table outside is free; he asks whether that is acceptable."
+  - "The vegetarian main is sold out, so he suggests a side-dish combination."
+useful_phrases:
+  - { text: "Einen Tisch für zwei, bitte.", reading: "EYE-nen tish fuer tsvai", meaning: "A table for two, please." }
+  - { text: "Ich hätte gern ein großes Bier.", reading: "ikh HET-tuh gairn ain GROH-ses beer", meaning: "I'd like a large beer." }
+  - { text: "Haben Sie etwas Vegetarisches?", reading: "HAH-ben zee ET-vas veh-geh-TAH-rish-es", meaning: "Do you have something vegetarian?" }
+  - { text: "Getrennt, bitte.", reading: "guh-TRENT BIT-tuh", meaning: "Separately, please." }
+cultural_notes:
+  - "'Zusammen oder getrennt?' is asked almost every time — decide before he comes."
+  - "You tip by rounding up out loud: a €18.40 bill becomes 'Zwanzig, bitte.'"
+  - "Tap water is not free or automatic; order 'ein stilles Wasser' if you want it."
+voice: { azure: "de-DE-ConradNeural", browser_hint: "de-DE/male" }
+tags: [food, restaurant, paying]
+status: published

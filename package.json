@@ -1,0 +1,31 @@
+{
+  "name": "talkscene",
+  "private": true,
+  "version": "0.4.0",
+  "description": "Scenario-based language learning chatbot (ko/ja/de/en)",
+  "packageManager": "pnpm@9.12.0",
+  "engines": {
+    "node": ">=20.11"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @talkscene/web dev",
+    "build": "pnpm --filter @talkscene/sdk build && pnpm --filter @talkscene/web build",
+    "lint": "pnpm --filter @talkscene/web lint",
+    "typecheck": "pnpm -r typecheck",
+    "gen:sdk": "pnpm --filter @talkscene/sdk generate",
+    "scenarios:validate": "node packages/scenarios/validate.mjs",
+    "test:e2e": "pnpm --filter @talkscene/web test:e2e"
+  },
+  "devDependencies": {
+    "ajv": "8.17.1",
+    "ajv-formats": "3.0.1",
+    "yaml": "2.5.1"
+  },
+  "pnpm": {
+    "overrides": {
+      "tailwindcss": "4.3.3",
+      "@tailwindcss/node": "4.3.3",
+      "@tailwindcss/oxide": "4.3.3"
+    }
+  }
+}

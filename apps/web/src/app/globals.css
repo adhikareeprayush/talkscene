@@ -1,0 +1,436 @@
+@import "tailwindcss";
+
+/*
+ * TalkScene design tokens.
+ *
+ * Every colour is semantic and flips for dark mode at the token level, so
+ * components never carry `dark:` variants. The one moving part is the language
+ * accent: `<html data-lang="ko">` re-tints the whole app (plan §11.1 - KO coral,
+ * JA indigo, DE amber, EN teal).
+ *
+ * Accents come in three strengths: `--accent` for fills and large graphics
+ * (needs 3:1), `--accent-ink` for text (needs 4.5:1 on paper), `--accent-soft`
+ * for tinted backgrounds. Feedback colours never stand alone: every badge also
+ * carries an icon and a word, because colour is not information (WCAG 1.4.1).
+ */
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-on-accent: var(--on-accent);
+  --color-great: var(--great);
+  --color-great-soft: var(--great-soft);
+  --color-improve: var(--improve);
+  --color-improve-soft: var(--improve-soft);
+  --color-attention: var(--attention);
+  --color-attention-soft: var(--attention-soft);
+  --color-heat-1: var(--heat-1);
+  --color-heat-2: var(--heat-2);
+  --color-heat-3: var(--heat-3);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    "Apple SD Gothic Neo", "Hiragino Sans", "Noto Sans CJK KR", "Noto Sans CJK JP", sans-serif;
+  --font-display: var(--font-newsreader), "Iowan Old Style", Georgia, serif;
+  /* Latin from Inter; CJK falls through to the best installed face. Korean and
+     Japanese faces are listed per script by `:lang()` below, because Han
+     characters shared by both must render in the right regional style. */
+  --font-target: var(--font-inter), "Noto Sans KR", "Noto Sans CJK KR", "Apple SD Gothic Neo",
+    "Malgun Gothic", "Noto Sans JP", "Noto Sans CJK JP", "Hiragino Sans", "Yu Gothic UI",
+    "Meiryo", sans-serif;
+
+  --radius-card: 18px;
+  --radius-bubble: 22px;
+  --ease-out-soft: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+
+:root {
+  color-scheme: light;
+  --paper: #f6f3ed;
+  --paper-2: #eeeae2;
+  --card: #fffdf9;
+  --ink: #1b1814;
+  --ink-2: #554e45;
+  --ink-3: #736c61;
+  --line: #e3ddd2;
+  --line-strong: #cfc7b9;
+  --on-accent: #ffffff;
+
+  --great: #24774b;
+  --great-soft: #e2f1e8;
+  --improve: #965c05;
+  --improve-soft: #f8ecd6;
+  --attention: #b1402d;
+  --attention-soft: #f8e3dd;
+
+  --heat-1: color-mix(in oklab, var(--accent) 66%, var(--card));
+  --heat-2: var(--accent);
+  --heat-3: var(--accent-ink);
+
+  /* Default accent (no language chosen yet): a neutral warm ink. */
+  --accent: #3b352d;
+  --accent-ink: #3b352d;
+  --accent-soft: #ebe6dc;
+  --glow: 59 53 45;
+}
+
+
+/* Per-language accents. `[data-lang]` matches the root *and* any subtree, so
+   a Japanese card inside a Korean page wears indigo. Every block sets all five
+   accent tokens so nothing is inherited from a different language. */
+[data-lang="ko"] {
+  --accent: #e0533c;
+  --accent-ink: #ad3522;
+  --accent-soft: #fbe5df;
+  --on-accent: #1b1814;
+  --glow: 224 83 60;
+}
+[data-lang="ja"] {
+  --accent: #4a56cf;
+  --accent-ink: #3742b0;
+  --accent-soft: #e6e8fa;
+  --on-accent: #ffffff;
+  --glow: 74 86 207;
+}
+[data-lang="de"] {
+  --accent: #c37a0c;
+  --accent-ink: #8a5306;
+  --accent-soft: #f7ead2;
+  --on-accent: #1b1814;
+  --glow: 195 122 12;
+}
+[data-lang="en"] {
+  --accent: #0d8274;
+  --accent-ink: #095f54;
+  --accent-soft: #dcf1ed;
+  --on-accent: #ffffff;
+  --glow: 13 130 116;
+}
+
+/* Dark tokens: system preference unless the learner picked light explicitly. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #14120f;
+    --paper-2: #1b1814;
+    --card: #211e19;
+    --ink: #f2ede4;
+    --ink-2: #b8afa2;
+    --ink-3: #8a8276;
+    --line: #2e2a24;
+    --line-strong: #3d3830;
+    --great: #5cc48a;
+    --great-soft: #17301f;
+    --improve: #e8ad45;
+    --improve-soft: #33260f;
+    --attention: #f2846d;
+    --attention-soft: #3a1d16;
+    --accent: #d8d0c2;
+    --accent-ink: #e9e2d6;
+    --accent-soft: #2a261f;
+    --on-accent: #14120f;
+    --glow: 216 208 194;
+    --heat-1: color-mix(in oklab, var(--accent) 50%, var(--card));
+    --heat-2: color-mix(in oklab, var(--accent) 75%, var(--card));
+    --heat-3: var(--accent);
+  }
+  :root:not([data-theme="light"]) [data-lang="ko"],
+  :root:not([data-theme="light"])[data-lang="ko"] {
+    --accent: #ff7a63;
+    --accent-ink: #ff9a87;
+    --accent-soft: #3a1c16;
+    --on-accent: #14120f;
+    --glow: 255 122 99;
+  }
+  :root:not([data-theme="light"]) [data-lang="ja"],
+  :root:not([data-theme="light"])[data-lang="ja"] {
+    --accent: #8d97ff;
+    --accent-ink: #a9b1ff;
+    --accent-soft: #1d2042;
+    --on-accent: #14120f;
+    --glow: 141 151 255;
+  }
+  :root:not([data-theme="light"]) [data-lang="de"],
+  :root:not([data-theme="light"])[data-lang="de"] {
+    --accent: #f0b440;
+    --accent-ink: #f6c76a;
+    --accent-soft: #33260f;
+    --on-accent: #14120f;
+    --glow: 240 180 64;
+  }
+  :root:not([data-theme="light"]) [data-lang="en"],
+  :root:not([data-theme="light"])[data-lang="en"] {
+    --accent: #3cc6b3;
+    --accent-ink: #6dd6c7;
+    --accent-soft: #0f2e2a;
+    --on-accent: #14120f;
+    --glow: 60 198 179;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #14120f;
+  --paper-2: #1b1814;
+  --card: #211e19;
+  --ink: #f2ede4;
+  --ink-2: #b8afa2;
+  --ink-3: #8a8276;
+  --line: #2e2a24;
+  --line-strong: #3d3830;
+  --great: #5cc48a;
+  --great-soft: #17301f;
+  --improve: #e8ad45;
+  --improve-soft: #33260f;
+  --attention: #f2846d;
+  --attention-soft: #3a1d16;
+  --accent: #d8d0c2;
+  --accent-ink: #e9e2d6;
+  --accent-soft: #2a261f;
+  --on-accent: #14120f;
+  --glow: 216 208 194;
+  --heat-1: color-mix(in oklab, var(--accent) 50%, var(--card));
+  --heat-2: color-mix(in oklab, var(--accent) 75%, var(--card));
+  --heat-3: var(--accent);
+}
+:root[data-theme="dark"] [data-lang="ko"],
+:root[data-theme="dark"][data-lang="ko"] {
+  --accent: #ff7a63;
+  --accent-ink: #ff9a87;
+  --accent-soft: #3a1c16;
+  --on-accent: #14120f;
+  --glow: 255 122 99;
+}
+:root[data-theme="dark"] [data-lang="ja"],
+:root[data-theme="dark"][data-lang="ja"] {
+  --accent: #8d97ff;
+  --accent-ink: #a9b1ff;
+  --accent-soft: #1d2042;
+  --on-accent: #14120f;
+  --glow: 141 151 255;
+}
+:root[data-theme="dark"] [data-lang="de"],
+:root[data-theme="dark"][data-lang="de"] {
+  --accent: #f0b440;
+  --accent-ink: #f6c76a;
+  --accent-soft: #33260f;
+  --on-accent: #14120f;
+  --glow: 240 180 64;
+}
+:root[data-theme="dark"] [data-lang="en"],
+:root[data-theme="dark"][data-lang="en"] {
+  --accent: #3cc6b3;
+  --accent-ink: #6dd6c7;
+  --accent-soft: #0f2e2a;
+  --on-accent: #14120f;
+  --glow: 60 198 179;
+}
+
+/* ── base ─────────────────────────────────────────────────────────────────── */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-feature-settings: "cv11", "ss01";
+    line-height: 1.5;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    transition: background-color 400ms var(--ease-out-soft), color 400ms var(--ease-out-soft);
+  }
+
+  /* A barely-there paper grain, so large calm surfaces do not read as flat. */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.045;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) body::before { mix-blend-mode: screen; opacity: 0.035; }
+  }
+  :root[data-theme="dark"] body::before { mix-blend-mode: screen; opacity: 0.035; }
+
+  ::selection {
+    background: var(--accent-soft);
+    color: var(--ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 10px;
+  }
+
+  button,
+  [role="button"] {
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+  }
+
+  /* Target-language text: CJK needs more leading than Latin (plan §11.1). */
+  .target {
+    font-family: var(--font-target);
+    line-height: 1.6;
+    letter-spacing: 0;
+    word-break: keep-all;
+    /* Never start a line with closing punctuation (kinsoku), in any script. */
+    line-break: strict;
+    overflow-wrap: anywhere;
+  }
+  :lang(ja) .target,
+  .target:lang(ja) {
+    word-break: normal;
+    line-break: strict;
+    /* Japanese-style kanji, not the Korean or Chinese glyph variants. */
+    font-family: var(--font-inter), "Noto Sans JP", "Noto Sans CJK JP", "Hiragino Sans",
+      "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Meiryo", sans-serif;
+  }
+  :lang(ko) .target,
+  .target:lang(ko) {
+    font-family: var(--font-inter), "Noto Sans KR", "Noto Sans CJK KR", "Apple SD Gothic Neo",
+      "Malgun Gothic", sans-serif;
+  }
+
+  /* Furigana via <ruby>, sized to stay legible without crowding the line. */
+  ruby { ruby-position: over; }
+  rt {
+    font-size: 0.52em;
+    color: var(--ink-3);
+    letter-spacing: 0.02em;
+    font-weight: 500;
+  }
+}
+
+/* ── motion ───────────────────────────────────────────────────────────────── */
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes bubble-in {
+  from { opacity: 0; transform: translateY(8px) scale(0.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.55; }
+  50% { transform: scale(1.08); opacity: 0.9; }
+}
+@keyframes ripple {
+  from { transform: scale(1); opacity: 0.45; }
+  to { transform: scale(1.9); opacity: 0; }
+}
+@keyframes shimmer {
+  from { background-position: -200% 0; }
+  to { background-position: 200% 0; }
+}
+@keyframes caret {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+@keyframes draw {
+  from { stroke-dashoffset: var(--dash, 300); }
+  to { stroke-dashoffset: var(--to, 0); }
+}
+@keyframes sheet-up {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@layer utilities {
+  /* Staggered entrance: set `--i` on each child to order the reveal. */
+  .reveal {
+    animation: reveal 560ms var(--ease-out-soft) both;
+    animation-delay: calc(var(--i, 0) * 70ms);
+  }
+  .bubble-in { animation: bubble-in 380ms var(--ease-out-soft) both; }
+  .fade-in { animation: fade 300ms ease both; }
+  .sheet-up { animation: sheet-up 360ms var(--ease-out-soft) both; }
+
+  .skeleton {
+    background: linear-gradient(90deg, var(--paper-2) 25%, var(--line) 37%, var(--paper-2) 63%);
+    background-size: 400% 100%;
+    animation: shimmer 1.6s ease-in-out infinite;
+    border-radius: 10px;
+  }
+
+  .typing-caret::after {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    margin-left: 2px;
+    vertical-align: -0.12em;
+    background: var(--accent);
+    animation: caret 1s steps(1) infinite;
+  }
+
+  /* WCAG 2.5.8: every touch target at least 44x44 (plan §11.1). */
+  .tap { min-height: 44px; min-width: 44px; }
+
+  .glow-accent {
+    background:
+      radial-gradient(60% 55% at 50% 0%, rgb(var(--glow) / 0.16), transparent 70%),
+      radial-gradient(40% 40% at 85% 10%, rgb(var(--glow) / 0.08), transparent 70%);
+  }
+
+  .hairline { box-shadow: inset 0 0 0 1px var(--line); }
+
+  .card {
+    background: var(--card);
+    border-radius: var(--radius-card);
+    box-shadow:
+      inset 0 0 0 1px var(--line),
+      0 1px 0 rgb(0 0 0 / 0.02),
+      0 12px 32px -18px rgb(27 24 20 / 0.18);
+  }
+
+  .emoji {
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Twemoji Mozilla", sans-serif;
+    font-variant-emoji: emoji;
+    line-height: 1;
+  }
+
+  .scrollbar-none { scrollbar-width: none; }
+  .scrollbar-none::-webkit-scrollbar { display: none; }
+
+  .safe-bottom { padding-bottom: max(env(safe-area-inset-bottom), 0px); }
+  .tabular { font-variant-numeric: tabular-nums; }
+  .balance { text-wrap: balance; }
+  .pretty { text-wrap: pretty; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,39 @@
+id: en-phone-banking-b1
+version: 1
+language: en
+level: B1
+category: services
+icon: "📞"
+title: { en: "Calling Your Bank" }
+summary: "Report a suspicious transaction on a phone call — identity checks, spelling out details, and no visual cues."
+persona:
+  name: "Rachel"
+  role: "Bank call-centre agent"
+  style: "Scripted but human. Security questions first, uses 'bear with me' and 'just to confirm'."
+setting: "A phone call to your bank's fraud line, mid-afternoon, slight line noise."
+user_role: "There is a £240 charge you don't recognise from two days ago. You want the card blocked."
+goals:
+  - { id: state_reason, text: "Say why you're calling" }
+  - { id: pass_security, text: "Answer the security questions" }
+  - { id: describe_transaction, text: "Describe the transaction with the date and amount" }
+  - { id: request_action, text: "Ask for the card to be blocked and reissued" }
+  - { id: confirm_timeline, text: "Confirm what happens next and when" }
+target_vocab: ["unauthorised", "dispute", "block the card", "bear with me", "reference number"]
+target_grammar: ["I'm calling about …", "numbers and dates on the phone", "spelling out with the alphabet", "Could you repeat that?"]
+opening_line: "Good afternoon, you're through to the fraud team, Rachel speaking. How can I help?"
+turn_limits: { min: 10, default: 12, max: 15 }
+complications:
+  - "She asks you to spell your surname and confirm your date of birth."
+  - "The line is unclear once and she asks you to repeat the amount."
+useful_phrases:
+  - { text: "I'm calling about a transaction I don't recognise.", reading: "aɪm ˈkɔːlɪŋ əˈbaʊt ə trænˈzækʃn̩", meaning: "Clear opening for the call." }
+  - { text: "Could you repeat that, please?", reading: "kʊd jə rɪˈpiːt ðæt pliːz", meaning: "Essential on a bad line — far better than silence." }
+  - { text: "That's K for kilo, I for India, M for Mike.", reading: "spelling alphabet", meaning: "Spelling out names on the phone." }
+  - { text: "Could I have a reference number?", reading: "kʊd aɪ hæv ə ˈrefrəns ˈnʌmbər", meaning: "Always close a service call with this." }
+cultural_notes:
+  - "Call centres will never ask for your full PIN or password — a real agent asks only partial details."
+  - "On the phone, numbers are grouped: '£240' is 'two hundred and forty pounds'; card digits are read in pairs or fours."
+  - "Pronunciation focus: final consonant clusters ('blocked', 'asked') and thirteen/thirty stress contrast."
+voice: { azure: "en-GB-SoniaNeural", browser_hint: "en-GB/female" }
+tags: [services, phone, numbers, b1]
+status: published

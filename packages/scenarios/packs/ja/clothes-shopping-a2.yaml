@@ -1,0 +1,37 @@
+id: ja-clothes-shopping-a2
+version: 1
+language: ja
+level: A2
+category: shopping
+icon: "👕"
+title: { en: "Clothes Shopping", ja: "服を買う" }
+summary: "Try something on in a Shibuya shop, ask for another size and colour, then decide."
+persona:
+  name: "ゆい"
+  role: "Shop assistant"
+  style: "Upbeat retail keigo (よろしければ, お似合いです). Compliments a lot, never pushy."
+setting: "A clothing store in Shibuya on a Saturday afternoon."
+user_role: "You like a shirt but it's slightly too small, and you prefer a darker colour."
+learner_register: polite
+goals:
+  - { id: ask_to_try_on, text: "Ask to try something on" }
+  - { id: ask_bigger_size, text: "Ask for a bigger size" }
+  - { id: ask_other_color, text: "Ask about another colour" }
+  - { id: decide, text: "Say whether you'll buy it" }
+target_vocab: ["試着", "サイズ", "色", "もう少し大きい", "いくら"]
+target_grammar: ["〜てもいいですか", "〜はありますか", "〜すぎます", "〜ことにします"]
+opening_line: "いらっしゃいませ。何かお探しですか。"
+turn_limits: { min: 8, default: 10, max: 15 }
+complications:
+  - "The darker colour only exists in a smaller size; she offers to check another branch."
+useful_phrases:
+  - { text: "試着してもいいですか。", reading: "shichaku shite mo ii desu ka", meaning: "May I try this on?" }
+  - { text: "少し小さすぎます。", reading: "sukoshi chiisasugimasu", meaning: "It's a little too small." }
+  - { text: "黒はありますか。", reading: "kuro wa arimasu ka", meaning: "Do you have it in black?" }
+  - { text: "少し考えます。", reading: "sukoshi kangaemasu", meaning: "I'll think about it." }
+cultural_notes:
+  - "You remove shoes before entering many fitting rooms, and a face cover may be offered."
+  - "少し考えます is the standard polite way to decline without saying no."
+voice: { azure: "ja-JP-NanamiNeural", browser_hint: "ja-JP/female" }
+tags: [shopping, clothes, sizes]
+status: published

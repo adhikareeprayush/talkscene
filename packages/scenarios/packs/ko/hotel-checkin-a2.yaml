@@ -1,0 +1,37 @@
+id: ko-hotel-checkin-a2
+version: 3
+language: ko
+level: A2
+category: travel
+icon: "🏨"
+title: { en: "Hotel Check-in", ko: "호텔 체크인" }
+summary: "Check in at a Seoul hotel and ask about breakfast and Wi-Fi."
+persona:
+  name: "민지"
+  role: "Front desk receptionist"
+  style: "Polite and warm. Uses 해요체; opens with a 합쇼체 greeting (어서 오십시오)."
+setting: "Lobby of a mid-range hotel in Myeongdong, 3 PM."
+user_role: "A tourist with a reservation under your own name for 2 nights."
+learner_register: polite
+goals:
+  - { id: give_name, text: "Give your name for the reservation" }
+  - { id: confirm_dates, text: "Confirm the number of nights" }
+  - { id: ask_breakfast, text: "Ask about breakfast hours" }
+  - { id: ask_wifi, text: "Ask for the Wi-Fi password" }
+target_vocab: ["예약", "체크인", "조식", "비밀번호", "몇 시"]
+target_grammar: ["-(으)ㄹ 수 있어요?", "-고 싶어요", "sino-Korean numbers + 박"]
+opening_line: "안녕하세요, 어서 오세요. 예약하셨어요?"
+turn_limits: { min: 8, default: 12, max: 15 }
+complications:
+  - "The room is not ready until 4 PM; she offers to store the luggage."
+useful_phrases:
+  - { text: "김민수로 예약했어요.", reading: "kim-minsu-ro yeyakhaesseoyo", meaning: "I booked under the name Kim Minsu." }
+  - { text: "이틀 묵을 거예요.", reading: "iteul mukeul geoyeyo", meaning: "I'll be staying two nights." }
+  - { text: "조식은 몇 시예요?", reading: "josigeun myeot siyeyo", meaning: "What time is breakfast?" }
+  - { text: "와이파이 비밀번호가 뭐예요?", reading: "waipai bimilbeonhoga mwoyeyo", meaning: "What's the Wi-Fi password?" }
+cultural_notes:
+  - "Staff will use 손님 (customer) or 고객님 rather than your name."
+  - "조식 is the standard word on hotel signage; 아침 식사 is the everyday equivalent."
+voice: { azure: "ko-KR-SunHiNeural", browser_hint: "ko-KR/female" }
+tags: [travel, hotel, polite-speech]
+status: published

@@ -1,0 +1,37 @@
+id: ja-konbini-a1
+version: 2
+language: ja
+level: A1
+category: culture
+icon: "🍙"
+title: { en: "At the Convenience Store", ja: "コンビニで" }
+summary: "Buy an onigiri and coffee, answer the clerk's standard questions, and pay by card."
+persona:
+  name: "田中"
+  role: "Convenience store clerk"
+  style: "Textbook service keigo: いらっしゃいませ / 温めますか / 袋はご利用ですか. Fast but clear."
+setting: "A convenience store next to a station, 8 AM, short queue behind you."
+user_role: "You want an onigiri, a hot coffee, and chopsticks. You pay by card."
+learner_register: polite
+goals:
+  - { id: ask_where_item, text: "Ask where something is" }
+  - { id: answer_heating, text: "Answer whether you want it heated" }
+  - { id: ask_bag, text: "Ask for a bag" }
+  - { id: pay_by_card, text: "Say you'll pay by card" }
+target_vocab: ["おにぎり", "温めますか", "袋", "お箸", "カードで"]
+target_grammar: ["〜はどこですか", "〜ください", "〜をお願いします"]
+opening_line: "いらっしゃいませ。"
+turn_limits: { min: 6, default: 10, max: 12 }
+complications:
+  - "The clerk asks whether you have a point card, then whether you need a receipt."
+useful_phrases:
+  - { text: "おにぎりはどこですか。", reading: "onigiri wa doko desu ka", meaning: "Where are the onigiri?" }
+  - { text: "はい、お願いします。", reading: "hai, onegaishimasu", meaning: "Yes, please." }
+  - { text: "袋をください。", reading: "fukuro o kudasai", meaning: "A bag, please." }
+  - { text: "カードでお願いします。", reading: "kaado de onegaishimasu", meaning: "By card, please." }
+cultural_notes:
+  - "袋はご利用ですか means 'do you need a bag?' — bags are charged for since 2020."
+  - "You put money and cards in the tray (トレー), not into the clerk's hand."
+voice: { azure: "ja-JP-NanamiNeural", browser_hint: "ja-JP/female" }
+tags: [culture, shopping, beginner, konbini]
+status: published

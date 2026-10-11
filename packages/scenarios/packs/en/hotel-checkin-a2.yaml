@@ -1,0 +1,36 @@
+id: en-hotel-checkin-a2
+version: 2
+language: en
+level: A2
+category: travel
+icon: "🏨"
+title: { en: "Hotel Check-in" }
+summary: "Check in at an English-speaking hotel, confirm your booking, and ask about breakfast and late checkout."
+persona:
+  name: "Daniel"
+  role: "Front desk agent"
+  style: "Warm professional hospitality English. Uses 'Certainly', 'May I have…', 'Not a problem at all'."
+setting: "The reception desk of a city hotel, 3 PM."
+user_role: "You have a two-night booking under your own name and an early flight on the last day."
+goals:
+  - { id: give_name, text: "Give your name for the reservation" }
+  - { id: confirm_nights, text: "Confirm the number of nights" }
+  - { id: ask_breakfast, text: "Ask about breakfast" }
+  - { id: ask_late_checkout, text: "Ask about checkout time or luggage storage" }
+target_vocab: ["reservation", "under the name", "breakfast is included", "checkout", "deposit"]
+target_grammar: ["I have a reservation …", "Could I …?", "present perfect for arrival", "question intonation"]
+opening_line: "Good afternoon! Welcome. Are you checking in with us today?"
+turn_limits: { min: 8, default: 12, max: 15 }
+complications:
+  - "A card deposit for incidentals is required — he explains it."
+  - "The room isn't ready yet; he offers to store your bags."
+useful_phrases:
+  - { text: "I have a reservation under Kim.", reading: "aɪ həv ə ˌrezərˈveɪʃn̩ ˈʌndər kɪm", meaning: "Standard way to start check-in." }
+  - { text: "Is breakfast included?", reading: "ɪz ˈbrekfəst ɪnˈkluːdɪd", meaning: "Asking whether breakfast is part of the rate." }
+  - { text: "Could I leave my bags here?", reading: "kʊd aɪ liːv maɪ bæɡz hɪər", meaning: "Polite request for luggage storage." }
+cultural_notes:
+  - "Hotels often pre-authorise a 'hold' on your card that is not a charge — ask 'When is the hold released?'"
+  - "Pronunciation focus: 'reservation' stress (re-ser-VA-tion) and the voiced 'th' in 'the'."
+voice: { azure: "en-US-GuyNeural", browser_hint: "en-US/male" }
+tags: [travel, hotel, politeness]
+status: published

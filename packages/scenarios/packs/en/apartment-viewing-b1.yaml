@@ -1,0 +1,38 @@
+id: en-apartment-viewing-b1
+version: 1
+language: en
+level: B1
+category: services
+icon: "🔑"
+title: { en: "Apartment Viewing" }
+summary: "View a flat, ask what's actually included, negotiate one condition, and ask what happens next."
+persona:
+  name: "Sandra"
+  role: "Letting agent"
+  style: "Salesy but informative. Talks in features, deflects awkward questions, responds well to direct ones."
+setting: "A one-bedroom flat with two other viewings booked after yours."
+user_role: "You like it but the deposit is high and you want to know what the bills really cost."
+goals:
+  - { id: ask_whats_included, text: "Ask what is included in the rent" }
+  - { id: ask_bills, text: "Ask about bills and council tax" }
+  - { id: ask_deposit, text: "Ask about the deposit and when it's returned" }
+  - { id: negotiate_condition, text: "Ask for one thing to be changed or fixed" }
+  - { id: ask_next_steps, text: "Ask what happens next" }
+target_vocab: ["bills included", "deposit", "council tax", "furnished", "break clause"]
+target_grammar: ["Would you be able to …?", "Is that negotiable?", "indirect questions", "conditionals (if I took it, …)"]
+opening_line: "Hi, come on in! So this is the living room — south-facing, lovely light, isn't it?"
+turn_limits: { min: 10, default: 12, max: 15 }
+complications:
+  - "She says the mould in the bathroom is 'just condensation'."
+  - "She pushes for a decision today because of the other viewings."
+useful_phrases:
+  - { text: "Is anything included in the rent?", reading: "ɪz ˈeniθɪŋ ɪnˈkluːdɪd ɪn ðə rent", meaning: "Gets to the real monthly cost." }
+  - { text: "Would you be able to fix that before I move in?", reading: "wʊd jə bi ˈeɪbl̩ tə fɪks ðæt", meaning: "Polite but concrete negotiation." }
+  - { text: "I'd like to think it over tonight.", reading: "aɪd laɪk tə θɪŋk ɪt ˈoʊvər", meaning: "Resists pressure without refusing." }
+cultural_notes:
+  - "In the UK, deposits must be held in a government-backed protection scheme — it's fair to ask which one."
+  - "'Is that negotiable?' is a completely normal question and agents expect it."
+  - "Pronunciation focus: the schwa in unstressed syllables ('council' /ˈkaʊnsl̩/) and 'would you' → /ˈwʊdʒə/."
+voice: { azure: "en-GB-SoniaNeural", browser_hint: "en-GB/female" }
+tags: [services, housing, negotiation, money]
+status: published

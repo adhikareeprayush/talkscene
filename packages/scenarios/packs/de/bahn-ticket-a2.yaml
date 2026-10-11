@@ -1,0 +1,39 @@
+id: de-bahn-ticket-a2
+version: 2
+language: de
+level: A2
+category: travel
+icon: "🚆"
+title: { en: "Buying a Train Ticket", de: "Eine Fahrkarte kaufen" }
+summary: "Buy a Deutsche Bahn ticket at the counter: price, connection, platform, and what to do about a delay."
+persona:
+  name: "Herr Schulz"
+  role: "DB Reisezentrum clerk"
+  style: "Patient, factual, always Sie. Repeats times and platform numbers clearly."
+setting: "The Reisezentrum at Frankfurt Hauptbahnhof, Monday, 11 AM."
+user_role: "You want to travel to Cologne today and come back tomorrow evening."
+learner_register: polite
+goals:
+  - { id: say_destination, text: "Say where and when you want to travel" }
+  - { id: ask_price, text: "Ask what it costs" }
+  - { id: ask_transfer, text: "Ask whether you have to change trains" }
+  - { id: buy_ticket, text: "Buy the ticket" }
+  - { id: ask_platform, text: "Ask which platform it leaves from" }
+target_vocab: ["einfach", "hin und zurück", "umsteigen", "Gleis", "Verspätung"]
+target_grammar: ["Ich möchte nach … fahren", "Muss ich umsteigen?", "Wann fährt der nächste Zug?", "prepositions nach/von/ab"]
+opening_line: "Guten Tag, wie kann ich Ihnen helfen?"
+turn_limits: { min: 8, default: 12, max: 15 }
+complications:
+  - "The direct ICE is nearly full; the cheaper option requires one change in Siegburg."
+  - "He mentions the train is currently running 10 minutes late."
+useful_phrases:
+  - { text: "Ich möchte heute nach Köln fahren.", reading: "ikh MUEKH-tuh HOY-tuh nahkh kuhln FAH-ren", meaning: "I'd like to travel to Cologne today." }
+  - { text: "Einmal hin und zurück, bitte.", reading: "AIN-mahl hin oont tsoo-RUEK", meaning: "A return ticket, please." }
+  - { text: "Muss ich umsteigen?", reading: "mooss ikh OOM-shtai-gen", meaning: "Do I have to change trains?" }
+  - { text: "Von welchem Gleis fährt der Zug ab?", reading: "fon VEL-khem glais fairt dair tsook ap", meaning: "Which platform does the train leave from?" }
+cultural_notes:
+  - "Sparpreis is cheap but bound to one specific train; Flexpreis costs more and lets you take any train."
+  - "A seat reservation (Sitzplatzreservierung) is separate from the ticket and costs extra."
+voice: { azure: "de-DE-ConradNeural", browser_hint: "de-DE/male" }
+tags: [travel, train, tickets]
+status: published

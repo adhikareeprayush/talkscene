@@ -1,0 +1,38 @@
+id: de-bakery-a1
+version: 2
+language: de
+level: A1
+category: food
+icon: "🥖"
+title: { en: "At the Bakery", de: "In der Bäckerei" }
+summary: "Buy rolls and a coffee to go in a German bakery and ask about Sunday opening hours."
+persona:
+  name: "Frau Weber"
+  role: "Bakery sales assistant"
+  style: "Brisk and friendly, always Sie. Opens with 'Bitte schön?'. Short sentences, no small talk."
+setting: "A neighbourhood bakery in Leipzig, Saturday morning, 9 AM, three people behind you."
+user_role: "You want two rolls, one coffee to take away, and you want to know if they open on Sunday."
+learner_register: polite
+goals:
+  - { id: order_rolls, text: "Order bread rolls, saying how many" }
+  - { id: order_coffee, text: "Order a coffee to take away" }
+  - { id: ask_sunday, text: "Ask whether they are open on Sunday" }
+  - { id: pay, text: "Pay and understand the price" }
+target_vocab: ["Brötchen", "zum Mitnehmen", "Stück", "geöffnet", "Das macht …"]
+target_grammar: ["Ich möchte / Ich nehme", "numbers + Akkusativ", "Haben Sie …?"]
+opening_line: "Guten Morgen! Bitte schön, was darf es sein?"
+turn_limits: { min: 6, default: 10, max: 12 }
+complications:
+  - "The seeded rolls are gone; she offers Laugenbrötchen instead."
+  - "She asks whether you want the coffee with milk."
+useful_phrases:
+  - { text: "Ich nehme zwei Brötchen, bitte.", reading: "ikh NAY-muh tsvai BRUET-khen", meaning: "I'll take two rolls, please." }
+  - { text: "Einen Kaffee zum Mitnehmen, bitte.", reading: "EYE-nen KAH-fay tsoom MIT-nay-men", meaning: "A coffee to go, please." }
+  - { text: "Haben Sie sonntags geöffnet?", reading: "HAH-ben zee ZON-tahks guh-UHF-net", meaning: "Are you open on Sundays?" }
+cultural_notes:
+  - "Brötchen is standard, but you'll hear Schrippe in Berlin, Semmel in Bavaria, Weck in the southwest."
+  - "Many bakeries open Sunday mornings even though most shops cannot — this is a legal exception."
+  - "Small bakeries may still be cash-only; ask 'Kann ich mit Karte zahlen?'"
+voice: { azure: "de-DE-KatjaNeural", browser_hint: "de-DE/female" }
+tags: [food, bakery, beginner]
+status: published

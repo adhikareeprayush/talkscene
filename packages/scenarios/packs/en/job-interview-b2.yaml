@@ -1,0 +1,40 @@
+id: en-job-interview-b2
+version: 1
+language: en
+level: B2
+category: work
+icon: "💼"
+title: { en: "Job Interview" }
+summary: "Handle a competency interview in English: STAR answers, the weakness question, and salary."
+persona:
+  name: "Priya"
+  role: "Hiring manager"
+  style: "Structured competency interview. Asks behavioural questions ('Tell me about a time when…') and probes for specifics."
+setting: "A video interview for a mid-level role, 45 minutes scheduled, 20 minutes in."
+user_role: "You have one strong project example prepared and a salary range in mind."
+goals:
+  - { id: answer_star, text: "Answer a 'tell me about a time when' question with a concrete example" }
+  - { id: quantify_impact, text: "Quantify the result of your work" }
+  - { id: handle_weakness, text: "Answer the weakness question credibly" }
+  - { id: discuss_salary, text: "Give a salary expectation" }
+  - { id: ask_question_back, text: "Ask a substantive question about the role" }
+target_vocab: ["take ownership", "stakeholders", "trade-off", "ramp up", "compensation range"]
+target_grammar: ["past simple vs present perfect for experience", "'what I'd do differently' conditionals", "hedging (I'd say, roughly)", "signposting (first, then, as a result)"]
+opening_line: "Thanks for walking me through your background. Now, tell me about a time you disagreed with a decision on a project — what did you do?"
+turn_limits: { min: 10, default: 12, max: 15 }
+complications:
+  - "She probes: 'And what would you do differently now?'"
+  - "She asks your expected compensation and waits for a number."
+useful_phrases:
+  - { text: "The situation was … so I … and as a result …", reading: "STAR structure", meaning: "Situation, Task, Action, Result — the expected shape of the answer." }
+  - { text: "We cut processing time by about 30%.", reading: "wi kʌt ˈproʊsesɪŋ taɪm", meaning: "Quantified impact; far stronger than 'it improved'." }
+  - { text: "I'd be looking for somewhere in the range of …", reading: "aɪd bi ˈlʊkɪŋ fər", meaning: "Hedged but specific salary answer." }
+  - { text: "What does success look like in the first six months?", reading: "", meaning: "A question that signals seniority." }
+cultural_notes:
+  - "Anglophone interviews reward specifics and ownership — say 'I' for your own work, 'we' only for genuinely shared work."
+  - "Modesty is read as lack of impact. State the result plainly, with a number if you have one."
+  - "'Tell me about a time when…' always wants one real story, not a general policy."
+  - "Pronunciation focus: sentence stress on the content words, and linking across words so answers don't sound word-by-word."
+voice: { azure: "en-US-JennyNeural", browser_hint: "en-US/female" }
+tags: [work, interview, star, salary]
+status: published

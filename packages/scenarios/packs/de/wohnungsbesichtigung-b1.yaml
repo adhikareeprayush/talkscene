@@ -1,0 +1,39 @@
+id: de-wohnungsbesichtigung-b1
+version: 1
+language: de
+level: B1
+category: services
+icon: "🔑"
+title: { en: "Apartment Viewing", de: "Wohnungsbesichtigung" }
+summary: "Make a good impression at a Hamburg flat viewing, understand the real cost, and ask what happens next."
+persona:
+  name: "Frau Richter"
+  role: "Landlady showing the flat herself"
+  style: "Polite Sie, mildly assessing. Asks direct questions about work and income without embarrassment."
+setting: "A 2-room flat in Hamburg-Altona; eight other applicants are waiting in the stairwell."
+user_role: "You want this flat, you have a permanent job, and you need to know the total monthly cost."
+learner_register: polite
+goals:
+  - { id: introduce_yourself, text: "Introduce yourself and say what you do" }
+  - { id: ask_costs, text: "Ask about the total monthly cost" }
+  - { id: ask_rules, text: "Ask about one house rule or condition" }
+  - { id: state_situation, text: "Explain why you'd be a reliable tenant" }
+  - { id: ask_next_steps, text: "Ask what the next step is" }
+target_vocab: ["Kaltmiete", "Nebenkosten", "Kaution", "Schufa", "unbefristet"]
+target_grammar: ["Konjunktiv II (würde, wäre, hätte)", "Ich arbeite als …", "indirect questions", "Relativsätze"]
+opening_line: "Hallo, kommen Sie rein. Sie sind wegen der Wohnung, nehme ich an?"
+turn_limits: { min: 10, default: 12, max: 15 }
+complications:
+  - "She asks for your Schufa and the last three payslips."
+  - "Another applicant arrives early and she starts to wrap up — you have to ask your questions quickly."
+useful_phrases:
+  - { text: "Wie hoch sind die Nebenkosten?", reading: "vee hohkh zint dee NAY-ben-kos-ten", meaning: "How much are the additional costs?" }
+  - { text: "Ich habe einen unbefristeten Arbeitsvertrag.", reading: "ikh HAH-buh EYE-nen OON-buh-fris-teh-ten AR-baits-fer-trahk", meaning: "I have a permanent employment contract." }
+  - { text: "Wie geht es jetzt weiter?", reading: "vee gayt es yetst VY-ter", meaning: "What's the next step?" }
+cultural_notes:
+  - "Kaltmiete is rent alone; Warmmiete adds Nebenkosten (heating, water, rubbish). Adverts usually quote Kaltmiete."
+  - "Kaution is normally three months' Kaltmiete and must be held in a separate account."
+  - "A Schufa credit report is expected, not intrusive — bring it printed."
+voice: { azure: "de-DE-KatjaNeural", browser_hint: "de-DE/female" }
+tags: [services, housing, formal, money]
+status: published

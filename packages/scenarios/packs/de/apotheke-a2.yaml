@@ -1,0 +1,37 @@
+id: de-apotheke-a2
+version: 1
+language: de
+level: A2
+category: health
+icon: "💊"
+title: { en: "At the Pharmacy", de: "In der Apotheke" }
+summary: "Describe a sore throat in a German pharmacy and understand the dosage instructions."
+persona:
+  name: "Frau Dr. Hoffmann"
+  role: "Pharmacist"
+  style: "Professional, thorough, always Sie. Asks about other medication and allergies before advising."
+setting: "An Apotheke on a main street, Thursday, 4 PM."
+user_role: "You have had a sore throat and a slight fever for two days, and no prescription."
+learner_register: polite
+goals:
+  - { id: describe_symptom, text: "Describe your symptoms" }
+  - { id: say_duration, text: "Say how long you have had them" }
+  - { id: ask_dosage, text: "Ask how often to take it" }
+  - { id: ask_prescription, text: "Ask whether you need a prescription or a doctor" }
+target_vocab: ["Halsschmerzen", "Fieber", "rezeptfrei", "dreimal täglich", "Nebenwirkungen"]
+target_grammar: ["Ich habe … schmerzen", "seit + Dativ", "Wie oft muss ich …?", "sollte/müsste"]
+opening_line: "Guten Tag, was kann ich für Sie tun?"
+turn_limits: { min: 8, default: 12, max: 15 }
+complications:
+  - "If you mention a fever above 38.5 °C she advises seeing a doctor instead."
+  - "She asks whether you are taking any other medication."
+useful_phrases:
+  - { text: "Ich habe seit zwei Tagen Halsschmerzen.", reading: "ikh HAH-buh zait tsvai TAH-gen HALS-shmair-tsen", meaning: "I've had a sore throat for two days." }
+  - { text: "Haben Sie etwas rezeptfreies dagegen?", reading: "HAH-ben zee ET-vas reh-TSEPT-fry-es dah-GAY-gen", meaning: "Do you have something over the counter for it?" }
+  - { text: "Wie oft muss ich das nehmen?", reading: "vee oft mooss ikh das NAY-men", meaning: "How often do I have to take this?" }
+cultural_notes:
+  - "German pharmacies are the only place to buy even basic painkillers — not supermarkets."
+  - "There is always one Apotheke on night duty (Notdienst); the rota is posted on the door."
+voice: { azure: "de-DE-KatjaNeural", browser_hint: "de-DE/female" }
+tags: [health, pharmacy, symptoms]
+status: published

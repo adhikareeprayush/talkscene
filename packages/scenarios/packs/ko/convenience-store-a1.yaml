@@ -1,0 +1,36 @@
+id: ko-convenience-store-a1
+version: 2
+language: ko
+level: A1
+category: culture
+icon: "🏪"
+title: { en: "At the Convenience Store", ko: "편의점에서" }
+summary: "Find a 삼각김밥, get it heated, ask for a bag, and pay — the most useful Korean errand there is."
+persona:
+  name: "민수"
+  role: "Convenience store clerk (university student working the night shift)"
+  style: "Low-energy but polite 해요체. Standard register service phrases."
+setting: "A 24-hour convenience store near a university campus, 11 PM."
+user_role: "You are hungry, you want a 삼각김밥 and a drink, and you have no cash."
+learner_register: polite
+goals:
+  - { id: ask_where_item, text: "Ask where something is" }
+  - { id: ask_heat_up, text: "Ask to have the food heated" }
+  - { id: ask_bag, text: "Ask for a bag" }
+  - { id: pay_by_card, text: "Pay by card" }
+target_vocab: ["삼각김밥", "봉투", "데워 주세요", "포인트", "어디"]
+target_grammar: ["-있어요?", "-은/는 어디예요?", "-주세요"]
+opening_line: "안녕하세요, 어서 오세요."
+turn_limits: { min: 6, default: 10, max: 12 }
+complications:
+  - "Bags cost 100 won and he asks whether you really need one."
+useful_phrases:
+  - { text: "삼각김밥 어디 있어요?", reading: "samgak-gimbap eodi isseoyo", meaning: "Where are the rice triangles?" }
+  - { text: "데워 주세요.", reading: "dewo juseyo", meaning: "Please heat it up." }
+  - { text: "봉투 주세요.", reading: "bongtu juseyo", meaning: "A bag, please." }
+cultural_notes:
+  - "Clerks ask 포인트 있으세요? (do you have points?) at almost every till — 없어요 is a complete answer."
+  - "Plastic bags are charged for by law; many people decline."
+voice: { azure: "ko-KR-InJoonNeural", browser_hint: "ko-KR/male" }
+tags: [culture, shopping, beginner, convenience-store]
+status: published

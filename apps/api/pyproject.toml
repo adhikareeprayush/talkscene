@@ -1,0 +1,75 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "talkscene-api"
+version = "0.4.0"
+description = "TalkScene API - scenario-based language learning"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi>=0.115,<1.0",
+  "uvicorn[standard]>=0.30",
+  "pydantic>=2.8,<3",
+  "pydantic-settings>=2.4",
+  "sqlalchemy[asyncio]>=2.0.30",
+  "aiosqlite>=0.20",
+  "alembic>=1.13",
+  "httpx>=0.27",
+  "pyjwt>=2.9",
+  "python-multipart>=0.0.9",
+  "pyyaml>=6.0",
+  "jsonschema>=4.23",
+  "email-validator>=2.2",
+  "cryptography>=43.0",
+]
+
+[project.optional-dependencies]
+postgres = ["asyncpg>=0.29"]
+redis = ["redis>=5.0"]
+s3 = ["boto3>=1.35"]
+dev = [
+  "pytest>=8.3",
+  "pytest-asyncio>=0.24",
+  "ruff>=0.6",
+  "mypy>=1.11",
+  "schemathesis>=3.33",
+  "types-pyyaml",
+]
+
+[project.scripts]
+talkscene = "talkscene.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["talkscene*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "ASYNC", "C4", "SIM", "RUF"]
+# B008: FastAPI's Depends()/Query() defaults are the documented idiom.
+# RUF001-003: "ambiguous" characters are the Korean, Japanese and German text
+# this product is built around.
+ignore = ["B008", "RUF001", "RUF002", "RUF003"]
+
+[tool.ruff.lint.per-file-ignores]
+# Prompt templates are prose: folding a sentence to satisfy a column limit
+# makes the instruction harder to read and review than the long line does.
+"talkscene/engine/prompts.py" = ["E501"]
+"talkscene/engine/register.py" = ["E501"]
+# Test names and inline fixtures are allowed to run long for legibility.
+"tests/*" = ["E501"]
+
+[tool.mypy]
+python_version = "3.12"
+plugins = ["pydantic.mypy"]
+ignore_missing_imports = true
+disallow_untyped_defs = false
+warn_unused_ignores = false
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning"]

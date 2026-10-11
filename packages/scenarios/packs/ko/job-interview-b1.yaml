@@ -1,0 +1,37 @@
+id: ko-job-interview-b1
+version: 1
+language: ko
+level: B1
+category: work
+icon: "💼"
+title: { en: "Job Interview", ko: "면접" }
+summary: "Introduce yourself, explain a strength and why you applied — all in formal 합쇼체."
+persona:
+  name: "김 부장"
+  role: "Hiring manager"
+  style: "Formal 합쇼체 throughout. Measured, slightly intimidating, asks one question at a time."
+setting: "A meeting room at a mid-size company in Yeouido, 10 AM."
+user_role: "You are interviewing for a junior marketing position and you prepared one strength and one question."
+learner_register: formal
+goals:
+  - { id: introduce_yourself, text: "Introduce yourself briefly" }
+  - { id: explain_strength, text: "Explain one of your strengths with an example" }
+  - { id: explain_why_company, text: "Say why you applied to this company" }
+  - { id: ask_question_back, text: "Ask the interviewer a question" }
+target_vocab: ["지원", "경력", "장점", "성장", "업무"]
+target_grammar: ["합쇼체 (-습니다/-십니까)", "-(으)ㄴ/는 편입니다", "-고 싶습니다", "-기 때문에"]
+opening_line: "안녕하십니까. 자리에 앉으십시오. 그럼 먼저 간단히 자기소개 부탁드립니다."
+turn_limits: { min: 10, default: 12, max: 15 }
+complications:
+  - "He pushes back once: 'That is a common answer — can you be more specific?'"
+  - "He asks about a weakness if you finish the strengths quickly."
+useful_phrases:
+  - { text: "지원하게 된 이유는 ~입니다.", reading: "jiwonhage doen iyuneun ~imnida", meaning: "The reason I applied is ..." }
+  - { text: "꼼꼼한 편입니다.", reading: "kkomkkomhan pyeonimnida", meaning: "I tend to be meticulous." }
+  - { text: "한 가지 여쭤봐도 될까요?", reading: "han gaji yeojjwobwado doelkkayo", meaning: "May I ask one question?" }
+cultural_notes:
+  - "Mixing 해요체 into an interview reads as too casual — the politeness linter flags it in your report."
+  - "자기소개 is expected to be 30–60 seconds and rehearsed; that is not seen as insincere."
+voice: { azure: "ko-KR-InJoonNeural", browser_hint: "ko-KR/male" }
+tags: [work, interview, formal-speech]
+status: published

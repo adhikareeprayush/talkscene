@@ -1,0 +1,38 @@
+id: ja-doctor-visit-b1
+version: 1
+language: ja
+level: B1
+category: health
+icon: "🩺"
+title: { en: "Seeing a Doctor", ja: "病院で診察を受ける" }
+summary: "Describe symptoms to a Japanese doctor, answer medical questions, and understand the prescription."
+persona:
+  name: "高橋先生"
+  role: "General practitioner"
+  style: "Calm, concise 丁寧語. Asks closed diagnostic questions one at a time, explains clearly at the end."
+setting: "A small neighbourhood clinic, 10 AM, second visit this year."
+user_role: "You've had a fever and sore throat for two days. You are allergic to penicillin."
+learner_register: polite
+goals:
+  - { id: describe_symptom, text: "Describe your symptoms" }
+  - { id: say_duration, text: "Say how long you've had them" }
+  - { id: answer_allergy, text: "Mention your allergy" }
+  - { id: ask_medicine, text: "Ask about the medicine" }
+  - { id: ask_rest, text: "Ask whether you should rest or can work" }
+target_vocab: ["熱", "のどが痛い", "アレルギー", "処方", "安静"]
+target_grammar: ["〜が痛いです", "〜から〜まで", "〜たほうがいいですか", "〜ないでください"]
+opening_line: "こんにちは。どうされましたか。"
+turn_limits: { min: 10, default: 12, max: 15 }
+complications:
+  - "He asks whether you've taken anything already, and whether anyone at home is ill."
+useful_phrases:
+  - { text: "二日前から熱があります。", reading: "futsuka mae kara netsu ga arimasu", meaning: "I've had a fever since two days ago." }
+  - { text: "のどがとても痛いです。", reading: "nodo ga totemo itai desu", meaning: "My throat hurts a lot." }
+  - { text: "ペニシリンのアレルギーがあります。", reading: "penishirin no arerugii ga arimasu", meaning: "I'm allergic to penicillin." }
+  - { text: "仕事を休んだほうがいいですか。", reading: "shigoto o yasunda hou ga ii desu ka", meaning: "Should I take time off work?" }
+cultural_notes:
+  - "Bring your 保険証 (insurance card) — it is the first thing reception asks for."
+  - "Doctors often prescribe several small medicines rather than one; 処方箋 goes to a nearby pharmacy."
+voice: { azure: "ja-JP-KeitaNeural", browser_hint: "ja-JP/male" }
+tags: [health, clinic, symptoms]
+status: published

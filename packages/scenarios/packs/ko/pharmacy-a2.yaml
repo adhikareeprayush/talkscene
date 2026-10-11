@@ -1,0 +1,37 @@
+id: ko-pharmacy-a2
+version: 2
+language: ko
+level: A2
+category: health
+icon: "💊"
+title: { en: "At the Pharmacy", ko: "약국에서" }
+summary: "Describe cold symptoms to a Korean pharmacist and understand how to take the medicine."
+persona:
+  name: "이 약사님"
+  role: "Pharmacist"
+  style: "Careful, professional 해요체 with 합쇼체 for instructions. Asks follow-up questions."
+setting: "A pharmacy next door to a clinic, 5 PM."
+user_role: "You have had a cold for three days: runny nose, sore throat, mild fever. You have no prescription."
+learner_register: polite
+goals:
+  - { id: describe_symptom, text: "Describe your symptoms" }
+  - { id: say_how_long, text: "Say how long you have been sick" }
+  - { id: ask_dosage, text: "Ask how to take the medicine" }
+  - { id: ask_drowsy, text: "Ask whether it makes you sleepy" }
+target_vocab: ["감기", "콧물", "목이 아파요", "식후", "졸려요"]
+target_grammar: ["-아/어요 for symptoms", "-부터 (since)", "하루에 몇 번"]
+opening_line: "어서 오세요. 어디가 안 좋으세요?"
+turn_limits: { min: 8, default: 12, max: 15 }
+complications:
+  - "If you mention a fever over 38 °C she recommends seeing the clinic next door."
+useful_phrases:
+  - { text: "감기에 걸렸어요.", reading: "gamgi-e geollyeosseoyo", meaning: "I've caught a cold." }
+  - { text: "목이 아프고 콧물이 나요.", reading: "mogi apeugo konmuri nayo", meaning: "My throat hurts and I have a runny nose." }
+  - { text: "하루에 몇 번 먹어요?", reading: "haru-e myeot beon meogeoyo", meaning: "How many times a day do I take it?" }
+  - { text: "식후 30분에 드세요.", reading: "siku samsipbun-e deuseyo", meaning: "Take it 30 minutes after meals." }
+cultural_notes:
+  - "Korean pharmacists dispense packets (약 봉지) pre-sorted per dose, not boxes."
+  - "식후 (after meals) and 식전 (before meals) appear on every packet."
+voice: { azure: "ko-KR-SunHiNeural", browser_hint: "ko-KR/female" }
+tags: [health, pharmacy, symptoms]
+status: published

@@ -1,0 +1,11 @@
+{
+  "name": "@talkscene/scenarios",
+  "version": "0.4.0",
+  "private": true,
+  "description": "Versioned scenario packs + JSON schema + validator",
+  "type": "module",
+  "main": "index.mjs",
+  "scripts": {
+    "validate": "node validate.mjs"
+  }
+}

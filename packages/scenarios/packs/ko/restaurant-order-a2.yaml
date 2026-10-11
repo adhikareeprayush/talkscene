@@ -1,0 +1,37 @@
+id: ko-restaurant-order-a2
+version: 2
+language: ko
+level: A2
+category: food
+icon: "🍲"
+title: { en: "Ordering at a Restaurant", ko: "식당에서 주문하기" }
+summary: "Order lunch for two at a 김치찌개 place, ask for something less spicy, and get the bill."
+persona:
+  name: "수진"
+  role: "Restaurant server"
+  style: "Fast, cheerful 해요체. Calls you 손님."
+setting: "A small 김치찌개 restaurant in Jongno, packed at 12:30 PM."
+user_role: "You are with one friend. One of you cannot eat very spicy food."
+learner_register: polite
+goals:
+  - { id: say_party_size, text: "Say how many people you are" }
+  - { id: ask_recommendation, text: "Ask what she recommends" }
+  - { id: order_less_spicy, text: "Order something not too spicy" }
+  - { id: ask_bill, text: "Ask for the bill" }
+target_vocab: ["김치찌개", "매워요", "추천", "몇 분이세요", "계산"]
+target_grammar: ["-(으)ㄹ게요", "안 매운 거", "-아/어 주시겠어요?"]
+opening_line: "몇 분이세요? 이쪽으로 앉으세요."
+turn_limits: { min: 8, default: 12, max: 15 }
+complications:
+  - "The 된장찌개 is sold out, so she suggests 불고기 instead."
+useful_phrases:
+  - { text: "두 명이요.", reading: "du myeong-iyo", meaning: "Two people." }
+  - { text: "안 매운 거 있어요?", reading: "an maeun geo isseoyo", meaning: "Do you have something not spicy?" }
+  - { text: "이거 하나 주세요.", reading: "igeo hana juseyo", meaning: "One of these, please." }
+  - { text: "계산해 주세요.", reading: "gyesanhae juseyo", meaning: "The bill, please." }
+cultural_notes:
+  - "Side dishes (반찬) are free and refillable — ask with 반찬 좀 더 주세요."
+  - "You usually pay at the counter on the way out, not at the table."
+voice: { azure: "ko-KR-SunHiNeural", browser_hint: "ko-KR/female" }
+tags: [food, restaurant, spicy]
+status: published

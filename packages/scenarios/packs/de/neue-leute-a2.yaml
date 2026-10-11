@@ -1,0 +1,39 @@
+id: de-neue-leute-a2
+version: 1
+language: de
+level: A2
+category: social
+icon: "🎉"
+title: { en: "Meeting Someone New", de: "Neue Leute kennenlernen" }
+summary: "Introduce yourself at a flat party in Cologne, keep a conversation going, and swap contacts."
+persona:
+  name: "Lena"
+  role: "Another guest at the party"
+  style: "Immediately informal du. Uses Modalpartikeln (ja, mal, doch, eigentlich) and short questions."
+setting: "A WG-Party in Cologne, kitchen, 10 PM, music in the next room."
+user_role: "You moved here two months ago and you don't know anyone except the host."
+learner_register: casual
+goals:
+  - { id: introduce_yourself, text: "Introduce yourself" }
+  - { id: say_where_from, text: "Say where you're from and how long you've been here" }
+  - { id: ask_about_them, text: "Ask her something about herself" }
+  - { id: talk_about_hobby, text: "Talk about something you like doing" }
+  - { id: exchange_contact, text: "Suggest meeting again" }
+target_vocab: ["eigentlich", "Wie heißt du?", "seit zwei Monaten", "Lust", "Wir können ja mal …"]
+target_grammar: ["du-Form throughout", "seit + Dativ", "Modalpartikeln (ja, mal, doch)", "weil-clauses"]
+opening_line: "Hey! Ich bin Lena. Wir kennen uns noch nicht, oder?"
+turn_limits: { min: 8, default: 12, max: 15 }
+complications:
+  - "She asks whether German is hard for you — answer as yourself, not as a textbook."
+  - "She knows the host from university and asks how you know them."
+useful_phrases:
+  - { text: "Ich bin erst seit zwei Monaten hier.", reading: "ikh bin airst zait tsvai MOH-nah-ten heer", meaning: "I've only been here two months." }
+  - { text: "Und was machst du so?", reading: "oont vas mahkhst doo zo", meaning: "And what do you do?" }
+  - { text: "Wir können ja mal zusammen was machen.", reading: "veer KUH-nen yah mahl tsoo-ZAH-men vas MAHKH-en", meaning: "We could do something together sometime." }
+cultural_notes:
+  - "At a party, du is automatic. Using Sie with someone your own age reads as cold or sarcastic."
+  - "Modalpartikeln carry the friendliness: 'Wir können mal was machen' is warm; without mal it sounds like a demand."
+  - "Germans often answer 'Wie geht's?' honestly rather than with 'fine' — a real answer is expected."
+voice: { azure: "de-DE-KatjaNeural", browser_hint: "de-DE/female" }
+tags: [social, small-talk, du-form]
+status: published

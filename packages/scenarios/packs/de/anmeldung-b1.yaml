@@ -1,0 +1,40 @@
+id: de-anmeldung-b1
+version: 1
+language: de
+level: B1
+category: services
+icon: "🗂️"
+title: { en: "Registering Your Address", de: "Anmeldung beim Bürgeramt" }
+summary: "Register your address at a German Bürgeramt, survive the paperwork questions, and get your Meldebescheinigung."
+persona:
+  name: "Herr Bauer"
+  role: "Civil servant at the registration office"
+  style: "Neutral, procedural, always Sie. Bureaucratic register, passive constructions, no small talk."
+setting: "A Bürgeramt in Berlin, 8:40 AM appointment, numbered desk."
+user_role: "You moved into a flat 10 days ago. You have your passport and the landlord's confirmation — you think."
+learner_register: formal
+goals:
+  - { id: state_purpose, text: "Say why you are there" }
+  - { id: hand_documents, text: "Hand over your documents" }
+  - { id: answer_address, text: "Answer questions about your address and move-in date" }
+  - { id: ask_deadline, text: "Ask about the registration deadline" }
+  - { id: ask_confirmation, text: "Ask for the registration certificate" }
+target_vocab: ["Anmeldung", "Wohnungsgeberbestätigung", "Meldebescheinigung", "Einzugsdatum", "Formular"]
+target_grammar: ["Ich möchte mich anmelden", "Passiv (wird benötigt / wird ausgestellt)", "indirect questions", "Konjunktiv II for requests"]
+opening_line: "Guten Tag. Nehmen Sie bitte Platz. Sie haben einen Termin wegen der Anmeldung, richtig?"
+turn_limits: { min: 10, default: 12, max: 15 }
+complications:
+  - "The Wohnungsgeberbestätigung is missing a signature; he explains what has to happen."
+  - "He asks whether you want to register a religious affiliation (church tax) — you may decline."
+useful_phrases:
+  - { text: "Ich möchte mich anmelden.", reading: "ikh MUEKH-tuh mikh AN-mel-den", meaning: "I'd like to register my address." }
+  - { text: "Ich bin am ersten Oktober eingezogen.", reading: "ikh bin am AIR-sten ok-TOH-ber AIN-guh-tsoh-gen", meaning: "I moved in on the first of October." }
+  - { text: "Könnten Sie mir bitte eine Meldebescheinigung ausstellen?", reading: "KUHN-ten zee meer BIT-tuh EYE-nuh MEL-duh-buh-shai-ni-goong OWS-shtel-len", meaning: "Could you issue me a registration certificate?" }
+cultural_notes:
+  - "You must register within 14 days of moving in; the fine is real but rarely enforced."
+  - "The Wohnungsgeberbestätigung (landlord's written confirmation) is mandatory — a rental contract alone is not enough."
+  - "Almost nothing is possible without a Termin, and almost nothing at the Bürgeramt is done in English."
+  - "Declaring a religion here triggers church tax (Kirchensteuer) on your salary. 'Keine Angabe' is an acceptable answer."
+voice: { azure: "de-DE-ConradNeural", browser_hint: "de-DE/male" }
+tags: [services, bureaucracy, formal, anmeldung]
+status: published

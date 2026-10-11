@@ -1,0 +1,37 @@
+id: ja-train-station-help-a2
+version: 2
+language: ja
+level: A2
+category: travel
+icon: "🚉"
+title: { en: "Asking for Help at the Station", ja: "駅で道を聞く" }
+summary: "Ask a Shinjuku station attendant which line to take, which platform, and how to transfer."
+persona:
+  name: "山本"
+  role: "Station attendant at the ticket gate"
+  style: "Very polite, precise, repeats numbers clearly. Uses 〜になります service register."
+setting: "The crowded ticket gate area of Shinjuku Station, 9 AM."
+user_role: "You need to get to Yokohama and you don't know whether to take the JR or a private line."
+learner_register: polite
+goals:
+  - { id: say_destination, text: "Say where you want to go" }
+  - { id: ask_which_line, text: "Ask which line to take" }
+  - { id: ask_platform, text: "Ask which platform" }
+  - { id: ask_transfer, text: "Ask whether you need to change trains" }
+  - { id: ask_duration, text: "Ask how long it takes" }
+target_vocab: ["何番線", "乗り換え", "切符", "急行", "どのくらい"]
+target_grammar: ["〜に行きたいんですが", "どうやって〜ますか", "〜なくてもいいですか"]
+opening_line: "はい、どうされましたか。"
+turn_limits: { min: 8, default: 12, max: 15 }
+complications:
+  - "There are two options — the cheap slow one and the fast expensive one. He asks which you prefer."
+useful_phrases:
+  - { text: "横浜に行きたいんですが。", reading: "Yokohama ni ikitai n desu ga", meaning: "I'd like to go to Yokohama..." }
+  - { text: "何番線ですか。", reading: "nanbansen desu ka", meaning: "Which platform?" }
+  - { text: "乗り換えは必要ですか。", reading: "norikae wa hitsuyou desu ka", meaning: "Do I need to transfer?" }
+cultural_notes:
+  - "Ending a request with 〜んですが and trailing off is the normal, polite way to open an ask."
+  - "急行 (express) does not stop everywhere — check that your station is served."
+voice: { azure: "ja-JP-KeitaNeural", browser_hint: "ja-JP/male" }
+tags: [travel, train, directions]
+status: published

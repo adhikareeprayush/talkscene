@@ -1,0 +1,37 @@
+id: en-returns-refund-a2
+version: 1
+language: en
+level: A2
+category: shopping
+icon: "🧾"
+title: { en: "Returning an Item" }
+summary: "Return a faulty item without a receipt, stay polite, and get a refund or exchange."
+persona:
+  name: "Chris"
+  role: "Customer service assistant"
+  style: "Procedural retail English. Polite but bound by policy; softens refusals with 'I'm afraid…'"
+setting: "The returns desk of a department store, Saturday afternoon."
+user_role: "You bought headphones three weeks ago, the left side doesn't work, and you only have the card you paid with."
+goals:
+  - { id: explain_problem, text: "Explain what is wrong with the item" }
+  - { id: say_when_bought, text: "Say when you bought it" }
+  - { id: handle_no_receipt, text: "Deal with not having the receipt" }
+  - { id: state_what_you_want, text: "Say whether you want a refund or an exchange" }
+target_vocab: ["faulty", "receipt", "refund", "exchange", "store credit"]
+target_grammar: ["It doesn't work / It stopped working", "I bought it three weeks ago", "Would it be possible to …?", "polite insistence"]
+opening_line: "Hi, how can I help you today?"
+turn_limits: { min: 8, default: 12, max: 15 }
+complications:
+  - "Policy is 14 days for refunds; he offers store credit instead."
+  - "He can find the purchase from your card if you ask."
+useful_phrases:
+  - { text: "I'd like to return these — they're faulty.", reading: "aɪd laɪk tə rɪˈtɜːrn ðiːz", meaning: "Opens the return clearly and factually." }
+  - { text: "I'm afraid I don't have the receipt.", reading: "aɪm əˈfreɪd aɪ doʊnt hæv ðə rɪˈsiːt", meaning: "Polite way to admit a problem." }
+  - { text: "Would it be possible to look it up on my card?", reading: "wʊd ɪt bi ˈpɒsəbl̩ tə lʊk ɪt ʌp", meaning: "Polite request for an alternative." }
+cultural_notes:
+  - "Faulty goods usually have stronger legal protection than 'changed my mind' returns — say 'faulty', not 'I don't like it'."
+  - "'I'm afraid…' signals a refusal is coming; it is not an apology you need to accept as final."
+  - "Pronunciation focus: 'receipt' (silent p) and the /iː/ in 'these' vs /ɪ/ in 'this'."
+voice: { azure: "en-GB-RyanNeural", browser_hint: "en-GB/male" }
+tags: [shopping, complaints, politeness]
+status: published

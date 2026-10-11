@@ -1,0 +1,40 @@
+id: ja-business-meeting-b2
+version: 1
+language: ja
+level: B2
+category: work
+icon: "💻"
+title: { en: "Rescheduling with a Client", ja: "取引先に納期の相談をする" }
+summary: "Tell a client the deadline will slip, apologise in proper keigo, and agree on a new date."
+persona:
+  name: "山田課長"
+  role: "Section manager at the client company"
+  style: "Business keigo throughout (恐れ入りますが, 承知しました). Polite but will press for specifics."
+setting: "A video call with a long-standing client, 2 PM on a Tuesday."
+user_role: "Your team will miss the delivery date by one week. You must say so, apologise, and propose a new plan."
+learner_register: formal
+goals:
+  - { id: greet_properly, text: "Open the call with the expected business greeting" }
+  - { id: explain_delay, text: "Explain the delay without making excuses" }
+  - { id: apologize, text: "Apologise at the right level of formality" }
+  - { id: propose_new_date, text: "Propose a new delivery date" }
+  - { id: confirm_next_step, text: "Confirm what happens next" }
+target_vocab: ["恐れ入りますが", "納期", "ご相談", "申し訳ございません", "ご確認"]
+target_grammar: ["謙譲語 (〜させていただきます)", "尊敬語 (〜いただけますでしょうか)", "〜という状況でございます", "クッション言葉"]
+opening_line: "お世話になっております。山田です。本日はお時間をいただき、ありがとうございます。"
+turn_limits: { min: 10, default: 12, max: 15 }
+complications:
+  - "He asks why you didn't flag it earlier, and whether a partial delivery is possible."
+  - "He requires written confirmation by end of day."
+useful_phrases:
+  - { text: "お世話になっております。", reading: "osewa ni natte orimasu", meaning: "Standard business opening — 'thank you for your continued support'." }
+  - { text: "大変申し訳ございません。", reading: "taihen moushiwake gozaimasen", meaning: "I am extremely sorry." }
+  - { text: "恐れ入りますが、納期を一週間延ばしていただけますでしょうか。", reading: "osoreirimasu ga, nouki o isshuukan nobashite itadakemasu deshou ka", meaning: "I'm afraid I must ask — could we extend the deadline by one week?" }
+  - { text: "本日中にメールでご確認いたします。", reading: "honjitsu-chuu ni meeru de go-kakunin itashimasu", meaning: "I'll confirm by email today." }
+cultural_notes:
+  - "Apologise before explaining. Leading with the reason reads as excuse-making (言い訳)."
+  - "クッション言葉 (恐れ入りますが / 申し上げにくいのですが) soften bad news and are expected, not optional."
+  - "Mixing plain 丁寧語 into a client call is a register error — the report flags it."
+voice: { azure: "ja-JP-KeitaNeural", browser_hint: "ja-JP/male" }
+tags: [work, keigo, negotiation, apology]
+status: published

@@ -1,0 +1,42 @@
+# deps
+node_modules/
+.pnpm-store/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# build
+.next/
+out/
+dist/
+build/
+.turbo/
+
+# env & secrets
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# data
+var/
+*.db
+*.db-journal
+*.sqlite3
+
+# test / tooling
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+coverage/
+.coverage
+htmlcov/
+playwright-report/
+test-results/
+
+# editors / os
+.DS_Store
+.idea/
+*.swp

@@ -1,0 +1,35 @@
+id: ko-cafe-order-a1
+version: 2
+language: ko
+level: A1
+category: food
+icon: "☕"
+title: { en: "Ordering at a Café", ko: "카페에서 주문하기" }
+summary: "Order a drink at a busy Hongdae café, pick a size, and ask for the Wi-Fi."
+persona:
+  name: "지훈"
+  role: "Barista"
+  style: "Quick, friendly 해요체. Uses service phrases like 주문하시겠어요? and 포장이세요?"
+setting: "A crowded café in Hongdae, 2 PM, music playing."
+user_role: "You want one iced americano to take away, and you need the Wi-Fi password."
+learner_register: polite
+goals:
+  - { id: order_drink, text: "Order a drink" }
+  - { id: choose_size, text: "Say which size you want" }
+  - { id: here_or_togo, text: "Say whether it is for here or to go" }
+  - { id: ask_wifi, text: "Ask for the Wi-Fi password" }
+target_vocab: ["아이스 아메리카노", "따뜻한", "사이즈", "포장", "와이파이"]
+target_grammar: ["-주세요", "-(으)로 할게요", "이거/저거 + 하나"]
+opening_line: "안녕하세요! 주문하시겠어요?"
+turn_limits: { min: 6, default: 10, max: 12 }
+complications:
+  - "They are out of the large size for iced drinks today."
+useful_phrases:
+  - { text: "아이스 아메리카노 한 잔 주세요.", reading: "aiseu amerikano han jan juseyo", meaning: "One iced americano, please." }
+  - { text: "포장이요.", reading: "pojang-iyo", meaning: "To go." }
+  - { text: "카드로 할게요.", reading: "kadeu-ro halgeyo", meaning: "I'll pay by card." }
+cultural_notes:
+  - "아아 is everyday slang for 아이스 아메리카노 — you will hear it, but say the full form at A1."
+voice: { azure: "ko-KR-InJoonNeural", browser_hint: "ko-KR/male" }
+tags: [food, cafe, beginner]
+status: published

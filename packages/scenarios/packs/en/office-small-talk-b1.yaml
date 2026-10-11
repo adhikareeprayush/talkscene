@@ -1,0 +1,39 @@
+id: en-office-small-talk-b1
+version: 1
+language: en
+level: B1
+category: work
+icon: "☕"
+title: { en: "Small Talk at Work" }
+summary: "Survive the kitchen conversation on your first week: weather, weekend, work — and how to leave politely."
+persona:
+  name: "Tom"
+  role: "Colleague from another team"
+  style: "Relaxed, chatty, uses fillers ('so', 'anyway', 'you know') and tag questions. Easy to talk to, hard to escape."
+setting: "The office kitchen, Monday 9:15 AM, kettle boiling."
+user_role: "It's your second week. You want to be friendly but you have a meeting in five minutes."
+goals:
+  - { id: open_small_talk, text: "Start a conversation" }
+  - { id: answer_weekend, text: "Answer the 'how was your weekend' question with more than one word" }
+  - { id: ask_back, text: "Ask him something back" }
+  - { id: find_common_ground, text: "Find something you have in common" }
+  - { id: exit_politely, text: "End the conversation politely" }
+target_vocab: ["How was your weekend?", "not too bad", "anyway", "I'd better", "catch up later"]
+target_grammar: ["tag questions (…, isn't it?)", "past simple for the weekend", "'I'd better …' for leaving", "softeners (kind of, a bit)"]
+opening_line: "Morning! You're the new one on the data team, right? How was your weekend?"
+turn_limits: { min: 10, default: 12, max: 15 }
+complications:
+  - "He asks a follow-up question you didn't prepare for."
+  - "He starts a second topic just as you need to leave."
+useful_phrases:
+  - { text: "Not too bad, thanks — yours?", reading: "nɒt tuː bæd θæŋks jɔːrz", meaning: "The standard reciprocal answer." }
+  - { text: "Oh really? How come?", reading: "oʊ ˈrɪəli haʊ kʌm", meaning: "Shows interest and keeps it going." }
+  - { text: "Anyway, I'd better get to my meeting — catch you later.", reading: "ˈeniweɪ aɪd ˈbetər", meaning: "The polite exit formula: anyway + reason + closing." }
+cultural_notes:
+  - "'How are you?' is a greeting, not a question. 'Good, you?' is the whole answer."
+  - "One-word answers read as unfriendly. Give a short detail, then ask back — that is the whole pattern."
+  - "'Anyway' is the signal that a conversation is ending; use it and nobody is offended."
+  - "Pronunciation focus: weak forms ('was' → /wəz/), and sentence stress carrying the meaning."
+voice: { azure: "en-US-GuyNeural", browser_hint: "en-US/male" }
+tags: [work, small-talk, social, fluency]
+status: published

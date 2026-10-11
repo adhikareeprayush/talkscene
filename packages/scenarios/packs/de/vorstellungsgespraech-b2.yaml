@@ -1,0 +1,40 @@
+id: de-vorstellungsgespraech-b2
+version: 1
+language: de
+level: B2
+category: work
+icon: "💼"
+title: { en: "Job Interview", de: "Vorstellungsgespräch" }
+summary: "Walk a German HR lead through your background, handle the weakness question, and discuss salary."
+persona:
+  name: "Frau Dr. Schneider"
+  role: "Head of HR at a Mittelstand engineering firm"
+  style: "Formal Sie throughout, Nominalstil, precise. Listens fully, then asks a sharper follow-up."
+setting: "A meeting room at a mid-size company near Stuttgart, 9 AM."
+user_role: "You are applying for a project role. You have prepared your Werdegang and a salary figure."
+learner_register: formal
+goals:
+  - { id: present_background, text: "Present your background coherently" }
+  - { id: explain_strength, text: "Give a strength with concrete evidence" }
+  - { id: handle_weakness, text: "Answer the weakness question credibly" }
+  - { id: explain_motivation, text: "Explain why this company" }
+  - { id: ask_question_back, text: "Ask a substantive question of your own" }
+target_vocab: ["Werdegang", "Stärken", "Herausforderung", "Einarbeitung", "Gehaltsvorstellung"]
+target_grammar: ["durchgehendes Siezen", "Konjunktiv II (ich würde … / das wäre …)", "Nominalstil", "Relativsätze", "Passiv"]
+opening_line: "Guten Tag, schön, dass Sie da sind. Erzählen Sie doch zunächst etwas über Ihren Werdegang."
+turn_limits: { min: 10, default: 12, max: 15 }
+complications:
+  - "She asks directly about your Gehaltsvorstellung and waits for a number."
+  - "She challenges one claim: 'Haben Sie dafür ein konkretes Beispiel?'"
+useful_phrases:
+  - { text: "Nach meinem Studium habe ich zunächst … gearbeitet.", reading: "nahkh MY-nem SHTOO-dee-oom HAH-buh ikh tsoo-NAIKHST … guh-AR-bai-tet", meaning: "After my degree I initially worked in ..." }
+  - { text: "Eine meiner Stärken ist …", reading: "EYE-nuh MY-ner SHTAIR-ken ist", meaning: "One of my strengths is ..." }
+  - { text: "Meine Gehaltsvorstellung liegt bei …", reading: "MY-nuh guh-HALTS-for-shtel-loong leekt by", meaning: "My salary expectation is around ..." }
+  - { text: "Wie sieht die Einarbeitung aus?", reading: "vee zeet dee AIN-ar-bai-toong ows", meaning: "What does the onboarding look like?" }
+cultural_notes:
+  - "Understatement is punished here: state achievements plainly with numbers, not modestly."
+  - "The salary question is normal and expected early. Give a range and a justification, not 'whatever you think'."
+  - "Switching to du mid-interview is a register error — stay with Sie unless she offers otherwise."
+voice: { azure: "de-DE-KatjaNeural", browser_hint: "de-DE/female" }
+tags: [work, interview, formal, salary]
+status: published
